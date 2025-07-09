@@ -68,4 +68,34 @@ document.addEventListener('DOMContentLoaded', function() {
       closeModal();
     }
   });
+
+  // Contact copy-to-clipboard logic
+  function handleCopyClick(e) {
+    const btn = e.currentTarget;
+    const value = btn.getAttribute('data-copy');
+    const card = btn.closest('.contact-info-card');
+    const tooltip = btn.nextElementSibling;
+    if (!navigator.clipboard) {
+      // fallback
+      const textarea = document.createElement('textarea');
+      textarea.value = value;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    } else {
+      navigator.clipboard.writeText(value);
+    }
+    if (card && tooltip) {
+      card.classList.add('copied');
+      tooltip.textContent = 'Copied!';
+      setTimeout(() => {
+        card.classList.remove('copied');
+        tooltip.textContent = 'Copy';
+      }, 1200);
+    }
+  }
+  document.querySelectorAll('.contact-copy-btn').forEach(btn => {
+    btn.addEventListener('click', handleCopyClick);
+  });
 }); 
