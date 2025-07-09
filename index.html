@@ -27,9 +27,9 @@
   <section class="hero">
     <div class="hero-overlay">
       <div class="hero-title-block">
-        <div class="hero-title-row">
-          <img src="assets/images/logo.png" alt="Engineer's Citadel Logo"  />
-          <h1 class="hero-subtitle">...for Engineering Solutions</h1>
+        <div class="hero-title-row" style="flex-direction:column;align-items:flex-start;gap:0.4rem;">
+          <span class="hero-title">Engineers Citadel</span>
+          <span class="hero-subtitle">...for Engineering Solutions</span>
         </div>
       </div>
     </div>
@@ -48,20 +48,26 @@
         Engineers' Citadel is teamed up in 2015 to provide affordable, efficient & optimal engineering solutions to specific service segments.</blockquote>
       </div>
       <div class="founder-profile">
-        <img src="assets/images/Screenshot 2025-07-08 at 11.32.04 AM.png" alt="Founder photo" class="founder-photo" />
+        <img src="assets/images/ProfilePic.jpg" alt="Founder photo" class="founder-photo" />
         <div class="founder-details">
           <h3>Girish J R</h3>
           <ul>
-            <li>Chartered Engineer (India), IE-M-1379652.</li>
             <li>Post graduate in Mechanical Engineering (NITK,NITT).</li>
-            <li>More than 28 years of industrial experience.</li>
-            <li>Worked with reputed organizations like:
+            <li>Chartered Engineer (Mech) (Institute of Engineers, India) (M-1379652) </li>
+            <li>More than three decades of engineering experience.</li>
+            <li>Registered Valuer, Plant & Machinery. (IBBI/RV/01/2025/15796)</li>
+            <li>
+              Areas of expertise:
               <ul>
-                <li>Suntechnics Energy systems (Conergy), Juwi renewable</li>
-                <li>Tata Motors, TVS Motors (project planning & execution)</li>
+                <li>Design of Solar Module Mounting structures.  </li>
+                <li>Design infrastructure facilities of Solar Power plants.</li>
+                <li>Design of static equipment platforms & steel mezzanine.</li>
+                <li>Design of Painting plant, CED Process plant.</li>
+                <li>Design of Heat Exchangers & associated equipment.</li>
+                <li>Design of steel chimneys and other steel structures.</li>
+                <li>Design of steel buildings & steel staircases.</li>
               </ul>
             </li>
-            <li>Areas of expertise : system design, planning & execution.</li>
           </ul>
         </div>
       </div>
@@ -335,9 +341,20 @@
     <section id="glossary" class="section">
       <h2>Glossary</h2>
       <div class="glossary-cards">
-        <div class="glossary-card">
-          <h3>Patent Application</h3>
-          <p><strong>Application Ref:</strong> <span class="glossary-patent">201741009557 A</span></p>
+        <div class="glossary-card certificate-thumb" data-img="assets/images/Chartered Engineer Certificate.jpg">
+          <img src="assets/images/Chartered Engineer Certificate.jpg" alt="Chartered Engineer Certificate" class="certificate-img-thumb" />
+          <div class="certificate-label">Chartered Engineer Certificate</div>
+        </div>
+        <div class="glossary-card certificate-thumb" data-img="assets/images/Registered Valuer Certificate.jpg">
+          <img src="assets/images/Registered Valuer Certificate.jpg" alt="Registered Valuer Certificate" class="certificate-img-thumb" />
+          <div class="certificate-label">Registered Valuer Certificate</div>
+        </div>
+        
+        <!-- Modal for certificate popout -->
+        <div id="certificate-modal" class="certificate-modal" style="display:none;">
+          <span class="certificate-modal-close" id="certificate-modal-close">&times;</span>
+          <img class="certificate-modal-content" id="certificate-modal-img" src="" alt="Certificate Full View" />
+          <div id="certificate-modal-caption"></div>
         </div>
         <div class="glossary-card">
           <h3>IJIRSET Papers Presented</h3>

@@ -29,4 +29,43 @@ document.querySelectorAll('.nav-links a').forEach(link => {
       targetSection.scrollIntoView({ behavior: 'smooth' });
     }
   });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Certificate modal logic
+  const modal = document.getElementById('certificate-modal');
+  const modalImg = document.getElementById('certificate-modal-img');
+  const modalCaption = document.getElementById('certificate-modal-caption');
+  const modalClose = document.getElementById('certificate-modal-close');
+  const thumbs = document.querySelectorAll('.certificate-thumb');
+
+  thumbs.forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      const imgSrc = thumb.getAttribute('data-img');
+      const label = thumb.querySelector('.certificate-label')?.textContent || '';
+      modal.style.display = 'flex';
+      modalImg.src = imgSrc;
+      modalCaption.textContent = label;
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal() {
+    modal.style.display = 'none';
+    modalImg.src = '';
+    modalCaption.textContent = '';
+    document.body.style.overflow = '';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  document.addEventListener('keydown', function(e) {
+    if (modal.style.display === 'flex' && (e.key === 'Escape' || e.key === 'Esc')) {
+      closeModal();
+    }
+  });
 }); 
