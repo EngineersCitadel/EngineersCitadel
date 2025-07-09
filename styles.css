@@ -230,7 +230,7 @@ html {
   align-items: center;
   justify-content: center;
   /* background-image: url('https://plus.unsplash.com/premium_photo-1679917152411-353fd633e218?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
-  background-image: url("assets/images/bgSolarWind.png");
+  background-image: url("assets/images/bgSolarWind2.png");
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -628,7 +628,7 @@ html {
 }
 .founder-photo {
   width: 280px;
-  height: 320px;
+  height: 380px;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(60,40,20,0.13);
@@ -875,5 +875,86 @@ html {
   }
   #certificate-modal-caption {
     font-size: 1rem;
+  }
+} 
+
+.network-section {
+  background: rgba(255,255,255,0.98) !important;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(255,183,71,0.10);
+  padding: 2.5rem 2.2rem 2.2rem 2.2rem;
+  margin-bottom: 2.5rem;
+}
+.network-intro {
+  font-size: 1.18rem;
+  color: #392925;
+  background: #fff8e1;
+  border-left: 5px solid #ffb347;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  box-shadow: 0 1px 8px rgba(255,183,71,0.06);
+  text-align: left;
+  line-height: 1.7;
+}
+.network-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.network-card {
+  background: #fff;
+  border: 1.5px solid #ffe0b2;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(255,183,71,0.08);
+  padding: 1.2rem 1.5rem;
+  min-width: 260px;
+  max-width: 370px;
+  flex: 1 1 260px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  transition: box-shadow 0.22s, transform 0.18s, border-color 0.18s;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.network-card:hover {
+  box-shadow: 0 8px 32px rgba(255,183,71,0.18), 0 2px 16px rgba(60,40,20,0.08);
+  transform: translateY(-4px) scale(1.012);
+  border-color: #ffb347;
+  z-index: 2;
+}
+.network-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.1rem;
+}
+.network-text {
+  font-size: 1.08rem;
+  color: #392925;
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .network-cards {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .network-card {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 1.1rem 1rem;
+  }
+  .network-section {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .network-intro {
+    font-size: 1rem;
+    padding: 0.7rem 0.7rem;
   }
 } 
